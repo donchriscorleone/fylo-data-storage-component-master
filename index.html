@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <main class="main">
+    <div class="card card-fylo card-flex">
+      <div class="card--header">
+        <img src="./images/logo.svg" alt="Brand logo">
+      </div>
+      <div class="card--body-icons">
+        <div class="icon-container">
+          <img src="./images/icon-document.svg" alt="Document logo">
+        </div>
+        <div class="icon-container">
+          <img src="./images/icon-folder.svg" alt="Folder logo">
+        </div>
+        <div class="icon-container">
+        <img src="./images/icon-upload.svg" alt="Upload logo">
+        </div>
+      </div>
+    </div>
+    <div class="card card-storage">
+      <div class="card--text">
+        <p>You've used <span class="used-storage">GB</span> of your storage</p>
+      </div>
+      <div class="card-range">
+        <input type="range" name="range" id="range" min="0" max="1000">
+      </div>
+      <div class="card-storage-left">
+        <span class="storage-left">185</span>
+        <p class="card-storage-left-text">gb left</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a href="https://www.instagram.com/christopheriilajom" target="_blank">&copy; Coded by Christopher II</a>
+  </footer> 
+</body>
+</html>

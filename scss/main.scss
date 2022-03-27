@@ -1,0 +1,150 @@
+@import './variables.scss';
+@import './range.scss';
+@import './footer.scss';
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $raleway;
+}
+
+.main {
+    height: 100vh;
+    background-color: $very-dark-blue;
+    background-image: url('./../images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: $dark-blue;
+    padding: 40px 40px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-fylo {
+    margin-top: 20vh;
+    border-top-right-radius: 90px;
+}
+
+.card-flex {
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+}
+
+.card--body-icons {
+    display: flex;
+    column-gap: 15px;
+}
+
+.icon-container {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: $very-dark-blue;
+    padding: 10px;
+    align-items: center;
+}
+
+.card--text {
+    color: $grayish-blue;
+    margin: 0 auto 25px;
+    text-align: center;
+
+    span {
+        color: $pale-blue;
+    }
+}
+
+.card-range {
+    margin: 10px 0 40px;
+    background-color: $very-dark-blue;
+    border-radius: 9px;
+    padding: 3px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-storage {
+    position: relative;
+}
+
+.card-storage-left {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    width: 60%;
+    max-width: 200px;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.card-storage-left-text {
+    color: $grayish-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.storage-left {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 30px;
+        background-image: url('./../images/bg-desktop.png');
+    }
+    
+    .card-fylo {
+        margin: 0 0 0 auto;
+    }
+
+    .card-storage {
+        margin: 0 auto 0 0;
+        max-width: 600px;
+        padding-bottom: 10px;
+    }
+
+    .card--text {
+        text-align: left;
+    }
+
+    .card-storage-left {
+        right: 40px;
+        top: -50px;
+        left: auto;
+
+        &::after {
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            top: 69px;
+            right: 0px;
+            display: block;
+            border-color: $very-dark-blue transparent transparent transparent;
+        }
+    }
+}
